@@ -1,0 +1,49 @@
+* {
+  font-family: monospace;
+  font-size: 3rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  text-align: center;
+}
+
+#wrapper.end #alphabet{
+  pointer-events: none;
+}
+
+#alphabet {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#alphabet span {
+  cursor: pointer;
+}
+
+#alphabet span.dim {
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+#letters {
+  letter-spacing: 0.5rem;
+}
+
+#wrapper.fail #letters {
+  color: red;
+}
+
+#wrapper.success #letters {
+  color: rgb(15, 129, 236);
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 2px solid black;
+  border-radius: 4px;
+}
