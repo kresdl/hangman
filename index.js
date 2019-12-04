@@ -13,7 +13,7 @@ wrapper = em('#wrapper'),
 init = async () => {
   const res = await fetch('assets/words.txt'),
   words = await res.text();
-  dictionary =  words.split('\r\n');
+  dictionary =  /\r\n/.test(words) ? words.split('\r\n') : words.split('\n');
 
   spans = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ'].reduce((acc, e) => ({
     ...acc,
